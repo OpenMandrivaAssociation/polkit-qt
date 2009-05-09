@@ -9,6 +9,7 @@ Source0:        http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.ta
 Patch0:         polkit-qt-0.9.2-fix-link.patch
 BuildRoot:      %_tmppath/%name-%version-%release-buildroot
 BuildRequires:  kdelibs4-devel
+BuildRequires:  polkit-devel
 Requires:       kdebase4-runtime
 
 %description
