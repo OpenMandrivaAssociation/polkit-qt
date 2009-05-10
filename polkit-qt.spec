@@ -1,7 +1,7 @@
 Name:           polkit-qt
 Version:        0.9.2
 Summary:        Assists in the Recovery and Prevention of Repetitive Strain Injury
-Release:        %mkrel 2
+Release:        %mkrel 3
 License:        GPL
 Group:          Graphical desktop/KDE
 URL:            http://www.rsibreak.org
@@ -55,6 +55,7 @@ Polkit-Qt core library.
 Summary:   Devel stuff for polkit-Qt
 Group:     Development/KDE and Qt
 Requires:  %libpolkit_qt_core = %version
+Requires:  %libpolkit_qt_gui = %version
 
 %description  devel
 This package contains header files needed if you wish to build applications
