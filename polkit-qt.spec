@@ -1,10 +1,10 @@
 Name:           polkit-qt
 Version:        0.9.2
-Summary:        Assists in the Recovery and Prevention of Repetitive Strain Injury
+Summary:        Library that allows developer to access PolicyKit API
 Release:        %mkrel 3
 License:        GPL
 Group:          Graphical desktop/KDE
-URL:            http://www.rsibreak.org
+URL:            http://www.kde.org/
 Source0:        http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:         polkit-qt-0.9.2-fix-link.patch
 BuildRoot:      %_tmppath/%name-%version-%release-buildroot
