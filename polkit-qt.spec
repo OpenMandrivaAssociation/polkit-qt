@@ -1,16 +1,17 @@
 Name:           polkit-qt
 Version:        0.9.2
 Summary:        Library that allows developer to access PolicyKit API
-Release:        %mkrel 3
+Release:        %mkrel 4
 License:        GPL
 Group:          Graphical desktop/KDE
 URL:            http://www.kde.org/
 Source0:        http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:         polkit-qt-0.9.2-fix-link.patch
 BuildRoot:      %_tmppath/%name-%version-%release-buildroot
-BuildRequires:  kdelibs4-devel
 BuildRequires:  polkit-devel
-Requires:       kdebase4-runtime
+BUildRequires:  qt4-devel
+BuildRequires:  cmake
+BuildRequires:  automoc4
 
 %description
 Polkit-qt is a library that allows developer to access PolicyKit 
@@ -30,7 +31,7 @@ Polkit-Qt core library.
 
 %files -n %libpolkit_qt_core
 %defattr(-,root,root)
-%_kde_libdir/libpolkit-qt-core.so.%{libpolkit_qt_core_major}*
+%_libdir/libpolkit-qt-core.so.%{libpolkit_qt_core_major}*
 
 #-----------------------------------------------------------------------------
 
@@ -46,8 +47,7 @@ Polkit-Qt core library.
 
 %files -n %libpolkit_qt_gui
 %defattr(-,root,root)
-%_kde_libdir/libpolkit-qt-gui.so.%{libpolkit_qt_gui_major}*
-
+%_libdir/libpolkit-qt-gui.so.%{libpolkit_qt_gui_major}*
 
 #-----------------------------------------------------------------------------
 
@@ -63,12 +63,12 @@ based on %name.
 
 %files devel
 %defattr(-,root,root)
-%_kde_libdir/pkgconfig/polkit-qt-core.pc
-%_kde_libdir/pkgconfig/polkit-qt-gui.pc
-%_kde_libdir/pkgconfig/polkit-qt.pc
-%_kde_includedir/PolicyKit/polkit-qt
-%_kde_libdir/libpolkit-qt-core.so
-%_kde_libdir/libpolkit-qt-gui.so
+%_libdir/pkgconfig/polkit-qt-core.pc
+%_libdir/pkgconfig/polkit-qt-gui.pc
+%_libdir/pkgconfig/polkit-qt.pc
+%_includedir/PolicyKit/polkit-qt
+%_libdir/libpolkit-qt-core.so
+%_libdir/libpolkit-qt-gui.so
 
 #-----------------------------------------------------------------------------
 
@@ -78,15 +78,13 @@ based on %name.
 
 %build
 
-%cmake_kde4
+%cmake_qt4
 %make
 
 
 %install
 rm -rf %buildroot
-cd build
-make DESTDIR=%buildroot install
-cd ..
+%makeinstall_std -C build
 
 %clean
 rm -rf %{buildroot}
