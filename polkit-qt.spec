@@ -1,7 +1,7 @@
 Name:           polkit-qt
 Version:        0.9.3
 Summary:        Library that allows developer to access PolicyKit API
-Release:        %mkrel 3
+Release:        %mkrel 4
 License:        GPL
 Group:          Graphical desktop/KDE
 URL:            http://www.kde.org/
@@ -86,4 +86,37 @@ rm -rf %buildroot
 
 %clean
 rm -rf %{buildroot}
+
+
+
+%changelog
+* Thu May 05 2011 Oden Eriksson <oeriksson@mandriva.com> 0.9.3-3mdv2011.0
++ Revision: 667801
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 0.9.3-2mdv2011.0
++ Revision: 607189
+- rebuild
+
+* Wed Dec 23 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.9.3-1mdv2010.1
++ Revision: 481716
+- Update to 0.9.3
+
+* Fri Jul 17 2009 Helio Chissini de Castro <helio@mandriva.com> 0.9.2-4mdv2010.0
++ Revision: 396895
+- KDE devel is not needed.
+
+  + Nicolas Lécureuil <nlecureuil@mandriva.com>
+    - Fix url and description
+
+* Sun May 10 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.9.2-3mdv2010.0
++ Revision: 373915
+- fix Requires
+
+* Sat May 09 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.9.2-2mdv2010.0
++ Revision: 373884
+- Fix requires on the devel package
+- Fix BuildRequires
+- import polkit-qt
+
 
