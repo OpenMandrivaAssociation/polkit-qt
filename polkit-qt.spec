@@ -1,13 +1,13 @@
 Name:           polkit-qt
 Version:        0.9.3
 Summary:        Library that allows developer to access PolicyKit API
-Release:        %mkrel 4
+Release:        5
 License:        GPL
 Group:          Graphical desktop/KDE
 URL:            http://www.kde.org/
 Source0:        http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot:      %_tmppath/%name-%version-%release-buildroot
-BuildRequires:  polkit-devel
+BuildRequires:  polkit-1-devel
 BUildRequires:  qt4-devel
 BuildRequires:  cmake
 BuildRequires:  automoc4
