@@ -28,7 +28,6 @@ Group: System/Libraries
 Polkit-Qt core library.
 
 %files -n %libpolkit_qt_core
-%defattr(-,root,root)
 %_libdir/libpolkit-qt-core.so.%{libpolkit_qt_core_major}*
 
 #-----------------------------------------------------------------------------
@@ -44,7 +43,6 @@ Group: System/Libraries
 Polkit-Qt core library.
 
 %files -n %libpolkit_qt_gui
-%defattr(-,root,root)
 %_libdir/libpolkit-qt-gui.so.%{libpolkit_qt_gui_major}*
 
 #-----------------------------------------------------------------------------
@@ -60,7 +58,6 @@ This package contains header files needed if you wish to build applications
 based on %name.
 
 %files devel
-%defattr(-,root,root)
 %_libdir/pkgconfig/polkit-qt-core.pc
 %_libdir/pkgconfig/polkit-qt-gui.pc
 %_libdir/pkgconfig/polkit-qt.pc
