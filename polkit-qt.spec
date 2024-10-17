@@ -4,7 +4,7 @@ Summary:        Library that allows developer to access PolicyKit API
 Release:        5
 License:        GPL
 Group:          Graphical desktop/KDE
-URL:            http://www.kde.org/
+URL:            https://www.kde.org/
 Source0:        http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 BuildRequires:  polkit-1-devel
 BUildRequires:  qt4-devel
